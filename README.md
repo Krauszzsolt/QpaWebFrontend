@@ -1,1 +1,2 @@
 # QpaWebFrontend
+Eddki Zsolti
