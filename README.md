@@ -1,6 +1,10 @@
-# QpaWebFrontend
+# laboschqpa.frontend 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+Frontend of laboschqpa website based on k8s.
+
+
+Check out the parent repo to learn about the project: https://github.com/janosgats/laboschqpa
+
 
 ## Development server
 
