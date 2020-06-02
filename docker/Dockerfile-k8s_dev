@@ -16,6 +16,6 @@ COPY . ${APP_HOME}/.
 
 ENV PATH ${APP_HOME}/node_modules/.bin:$PATH
 
-ENTRYPOINT ["sh"]
+#ENTRYPOINT ["sh"]
 # Only use '--disable-host-check' in localdev! It's a security flaw!
-CMD ["-c", "ng serve --host 0.0.0.0 --disable-host-check"]
+#CMD ["-c", "ng serve --host 0.0.0.0 --disable-host-check"]
