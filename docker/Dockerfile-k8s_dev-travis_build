@@ -1,0 +1,17 @@
+FROM node:12.7-alpine AS builder
+MAINTAINER "János Gats <gatsjanos@gmail.com>"
+
+EXPOSE 80
+WORKDIR /usr/src/app
+
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
+
+COPY . .
+RUN npm run build --prod
+
+
+FROM nginx:1.17.1-alpine
+
+COPY --from=builder /usr/src/app/dist/laboschqpa-frontend /usr/share/nginx/html

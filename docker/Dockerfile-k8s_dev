@@ -1,7 +1,7 @@
 FROM node:12.7-alpine
 MAINTAINER "János Gats <gatsjanos@gmail.com>"
 
-EXPOSE 4200
+EXPOSE 80
 ENV APP_HOME=/app
 
 RUN mkdir -p ${APP_HOME}
@@ -16,6 +16,6 @@ COPY . ${APP_HOME}/.
 
 ENV PATH ${APP_HOME}/node_modules/.bin:$PATH
 
-#ENTRYPOINT ["sh"]
+ENTRYPOINT ["sh"]
 # Only use '--disable-host-check' in localdev! It's a security flaw!
-#CMD ["-c", "ng serve --host 0.0.0.0 --disable-host-check"]
+CMD ["-c", "ng serve --port 80 --host 0.0.0.0 --disable-host-check"]
