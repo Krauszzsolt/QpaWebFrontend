@@ -2,34 +2,11 @@
   <div class = "flex-box">
   <h2 class = "title">Üdvözlünk a 49. Minden Szipi Szuper Schönherz Qpa oldalán</h2>
   <div class ="header">
-    <div>
 
-    </div>
-    <mat-card class = "login-card" *ngIf="isAuth">
-      <button class="login-button" mat-raised-button color="dark-peach" (click) = "loginGoogle()">
-        Login with Google
-      </button>
-      <button class="login-button" mat-raised-button color="dark-peach" (click) = "loginGithub()">
-        Login with Github
-      </button>
-    </mat-card>
-    <mat-card class = "isAuth-card" *ngIf="!isAuth">
-      <button class="login-button" mat-raised-button color="dark-peach" (click) = "isAuth = true">
-        Már regisztráltam
-      </button>
+    <mat-card class = "login-card" >
 
-    </mat-card>
-
-    <mat-card class = "isReg-card" *ngIf="!isReg">
-      <button class="login-button" mat-raised-button color="dark-peach" (click) = "isReg = true">
-        Regisztráció
-      </button>
-
-    </mat-card>
-
-    <mat-card class = "register-card" *ngIf="isReg">
-
-      <form class="example-form">
+      <form class="register-form" *ngIf="isReg">
+        <mat-card-title>Add meg az e-mail címed</mat-card-title>
         <mat-form-field class="email">
           <mat-label>Email</mat-label>
           <input matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
@@ -40,12 +17,33 @@
             Email is <strong>required</strong>
           </mat-error>
         </mat-form-field>
+
+        <button *ngIf="emailFormControl.hasError('required') || emailFormControl.hasError('email')"
+         class = "register-button" mat-raised-button color="dark-peach"
+         >Regisztráció
+        </button>
+
+        <button *ngIf="!emailFormControl.hasError('required') && !emailFormControl.hasError('email')"
+         class = "register-button" mat-raised-button color="dark-peach"
+         (click) = "register(emailFormControl.value)">Regisztráció
+        </button>
+
       </form>
 
-      <button *ngIf="!emailFormControl.hasError('required') && !emailFormControl.hasError('email')"
-         class = "register-button" mat-raised-button color="dark-peach"
-         (click) = "register(emailFormControl.value)">Register
-        </button>
+      <button *ngIf="isAuth" class="login-button" mat-raised-button color="dark-peach" (click) = "loginGoogle()">
+        Login with Google
+      </button>
+      <button *ngIf="isAuth" class="login-button" mat-raised-button color="dark-peach" (click) = "loginGithub()">
+        Login with Github
+      </button>
+
+      <button *ngIf="!isAuth" class="login-button" mat-raised-button color="dark-peach" (click) = "isAuth = true; isReg=false">
+        Már regisztráltam
+      </button>
+
+      <button *ngIf="!isReg" class="login-button" mat-raised-button color="dark-peach" (click) = "isReg = true; isAuth = false">
+        Regisztrálok
+      </button>
 
     </mat-card>
   </div>
