@@ -50,17 +50,15 @@ export class LoginComponent implements OnInit {
           console.log(error);
         })
       }
-      console.log(params);
       this.id = params['id'];
       this.key = params['key'];
     });
+
     if(this.id && this.key){
       this.registerService.verify(this.id, this.key).subscribe(resp => {
         if(resp.status == 200) this.isAuth = true;
       });
       }
-
-
   }
 
   emailFormControl = new FormControl('', [
@@ -69,14 +67,13 @@ export class LoginComponent implements OnInit {
   ]);
 
   register(email: string) {
-
     this.registerService.register(email).subscribe();
-
   }
 
   loginGoogle(){
     this.loginService.loginWithGoogle()
   }
+
   loginGithub(){
     this.loginService.loginWithGithub()
   }
