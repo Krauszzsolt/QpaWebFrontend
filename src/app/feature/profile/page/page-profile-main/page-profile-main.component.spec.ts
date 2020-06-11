@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageProfilMainComponent } from './page-profil-main.component';
+import { PageProfileMainComponent } from './page-profile-main.component';
 
-describe('PageProfilMainComponent', () => {
-  let component: PageProfilMainComponent;
-  let fixture: ComponentFixture<PageProfilMainComponent>;
+describe('PageProfileMainComponent', () => {
+  let component: PageProfileMainComponent;
+  let fixture: ComponentFixture<PageProfileMainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageProfilMainComponent ]
+      declarations: [ PageProfileMainComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageProfilMainComponent);
+    fixture = TestBed.createComponent(PageProfileMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

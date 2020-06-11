@@ -26,7 +26,7 @@ const routes: Routes = [
 
      {
       path: 'sormeres',
-     loadChildren: () => import('./feature/sormeres/sormeres-routing.module').then(m => m.SormeresRoutingModule)
+     loadChildren: () => import('./feature/beer-drinking/beer-drinking-routing.module').then(m => m.BeerDrinkingRoutingModule)
      },
 
      {
@@ -36,7 +36,7 @@ const routes: Routes = [
 
      {
       path: 'profil',
-     loadChildren: () => import('./feature/profil/profil-routing.module').then(m => m.ProfilRoutingModule)
+     loadChildren: () => import('./feature/profile/profile-routing.module').then(m => m.ProfileRoutingModule)
      },
 
   ],

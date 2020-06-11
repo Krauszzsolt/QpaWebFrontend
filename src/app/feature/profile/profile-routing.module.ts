@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageTeamDetailComponent } from '../team/page/page-team-detail/page-team-detail.component';
+import { PageProfileMainComponent } from './page/page-profile-main/page-profile-main.component';
 
 
 const routes: Routes = [
-  {path: '', component: PageTeamDetailComponent}
+  {path: '', component: PageProfileMainComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ProfilRoutingModule { }
+export class ProfileRoutingModule { }
