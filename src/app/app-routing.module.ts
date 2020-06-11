@@ -19,8 +19,28 @@ const routes: Routes = [
      loadChildren: () => import('./feature/news/news-routing.module').then(m => m.NewsRoutingModule)
      },
 
+     {
+      path: 'csapatok',
+     loadChildren: () => import('./feature/team/team-routing.module').then(m => m.TeamRoutingModule)
+     },
+
+     {
+      path: 'sormeres',
+     loadChildren: () => import('./feature/sormeres/sormeres-routing.module').then(m => m.SormeresRoutingModule)
+     },
+
+     {
+      path: 'riddle',
+     loadChildren: () => import('./feature/riddle/riddle-routing.module').then(m => m.RiddleRoutingModule)
+     },
+
+     {
+      path: 'profil',
+     loadChildren: () => import('./feature/profil/profil-routing.module').then(m => m.ProfilRoutingModule)
+     },
+
   ],
-  
+
 },
 
 ];

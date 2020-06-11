@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigateToNews(){
+    this.router.navigate(['main/hirek'])
+  }
+
+  navigateToTeams(){
+    this.router.navigate(['main/csapatok'])
+  }
+
+  navigateToSormeres(){
+    this.router.navigate(['main/sormeres'])
+  }
+
+  navigateToProfil(){
+    this.router.navigate(['main/profil'])
+  }
+
+  navigateToRiddle(){
+    this.router.navigate(['main/riddle'])
   }
 
 }
