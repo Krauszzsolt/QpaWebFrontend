@@ -33,21 +33,20 @@ export class LoginComponent implements OnInit {
       if(!params['scope'] && !params['key'] && params['code']){
         this.loginService.oauth(params, "github").subscribe(resp => {
           if(resp.status == 200) {
-            console.log("navigate")
+
             this.router.navigate(['main'])
           }
         }, error => {
-          console.log(error);
+
         })
       }
       else if(params['scope']){
         this.loginService.oauth(params, "google").subscribe(resp => {
           if(resp.status == 200) {
-            console.log("navigate")
             this.router.navigate(['main'])
           }
         }, error => {
-          console.log(error);
+
         })
       }
       this.id = params['id'];
