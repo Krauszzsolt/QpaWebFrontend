@@ -37,15 +37,17 @@
         Login with Github
       </button>
 
-      <button *ngIf="!isAuth" class="login-button" mat-raised-button color="dark-peach" (click) = "isAuth = true; isReg=false">
-        Már regisztráltam
+    </mat-card>
+
+    <div class="options">
+      <button  class='nav-button' mat-raised-button color="dark-peach" (click) = "isAuth = true; isReg=false">
+        Bejelentkezés
       </button>
 
-      <button *ngIf="!isReg" class="login-button" mat-raised-button color="dark-peach" (click) = "isReg = true; isAuth = false">
+      <button class='nav-button'  mat-raised-button color="dark-peach" (click) = "isReg = true; isAuth = false">
         Regisztrálok
       </button>
-
-    </mat-card>
+    </div>
   </div>
   <h2 class = "title">Az oldal használatához be kell jelentkezned</h2>
 </div>

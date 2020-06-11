@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService
 
     ) {
-    this.isAuth = false;
+    this.isAuth = true;
     this.isReg = false;
    }
 

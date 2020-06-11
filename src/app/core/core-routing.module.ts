@@ -6,10 +6,10 @@ import { LayoutComponent } from './page/layout/layout.page';
 
 
 const routes: Routes = [
-  {path: '' , component: LoginComponent},
-  {path: 'verifyEmail' , component: LoginComponent},
-  {path: 'oauth2/code/google' , component: LoginComponent},
-  {path: 'oauth2/code/github' , component: LoginComponent},
+  {path: 'login' , component: LoginComponent},
+  {path: 'login/verifyEmail' , component: LoginComponent},
+  {path: 'login/oauth2/code/google' , component: LoginComponent},
+  {path: 'login/oauth2/code/github' , component: LoginComponent},
   {path : 'layout', component: LayoutComponent}
 ];
 
