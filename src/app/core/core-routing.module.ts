@@ -7,10 +7,11 @@ import { LayoutComponent } from './page/layout/layout.page';
 
 const routes: Routes = [
   {path: 'login' , component: LoginComponent},
+  {path: '' , redirectTo: "login", component: LoginComponent},
   {path: 'login/verifyEmail' , component: LoginComponent},
   {path: 'login/oauth2/code/google' , component: LoginComponent},
   {path: 'login/oauth2/code/github' , component: LoginComponent},
-  {path : 'layout', component: LayoutComponent}
+  {path : 'main', component: LayoutComponent}
 ];
 
 @NgModule({

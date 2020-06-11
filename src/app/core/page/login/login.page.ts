@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
         this.loginService.oauth(params, "github").subscribe(resp => {
           if(resp.status == 200) {
             console.log("navigate")
-            this.router.navigate(['login/layout'])
+            this.router.navigate(['main'])
           }
         }, error => {
           console.log(error);
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
         this.loginService.oauth(params, "google").subscribe(resp => {
           if(resp.status == 200) {
             console.log("navigate")
-            this.router.navigate(['login/layout'])
+            this.router.navigate(['main'])
           }
         }, error => {
           console.log(error);

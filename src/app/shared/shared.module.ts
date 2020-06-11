@@ -5,6 +5,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
@@ -19,7 +22,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatDividerModule
   ],
   exports: [
     MatInputModule,
@@ -27,7 +33,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatDividerModule
 
   ]
 })

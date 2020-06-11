@@ -1,8 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FeatureAPage2Component } from './page/feature-a-page2/feature-a-page2.page';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', component: FeatureAPage2Component}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
