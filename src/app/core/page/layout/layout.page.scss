@@ -1,68 +1,54 @@
-.navbar-container{
-  min-height: 100vh;
-  width: 100vw;
+:host{
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.navbar{
+.navbar {
   border: 2px solid #555;
-  margin-left: 5px;
-  width: 20vw;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #FFD441;
-  position: fixed;
+  justify-content: flex-start;
+  background-color: #ffd441;
 
+  .nav-header {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-item {
+    cursor: pointer;
+    height: 70px;
+  };
+
+  .nav-item:hover {
+    background-color: #a7871d;
+  }
 }
 
-.main-content{
-  margin-left: 5px;
-  width: 80vw;
+.main-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.layout-header{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: inherit;
-  position: fixed;
-  background-color: #FFD441;
-}
-
-.feature-content{
-  margin-top: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: inherit;
-}
-
-.title{
-  text-transform: uppercase;
-}
-
-mat-divider{
-  margin-top: 2vh;
-
-}
-
-.nav-header{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
+.layout-header {
+  width: 100%;
   text-align: center;
+  background-color: #ffd441;
 }
 
-.nav-item{
-  cursor: pointer;
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: inherit;
+}
+
+.title {
+  text-transform: uppercase;
 }

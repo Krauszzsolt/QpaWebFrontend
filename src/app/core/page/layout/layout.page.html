@@ -1,30 +1,25 @@
-
-<mat-drawer-container class="navbar-container">
-  <mat-drawer class="navbar" mode="side" opened>
-    <mat-list>
-      <li class="nav-header"><h2>Qpa Web Jee</h2></li>
-      <mat-divider></mat-divider>
-      <mat-divider></mat-divider>
-      <mat-list-item class="nav-item" (click)="navigateToNews()">Hírek</mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item class="nav-item" (click)="navigateToTeams()">Csapatok</mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item class="nav-item" (click)="navigateToSormeres()">Sormeres</mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item class="nav-item" (click)="navigateToRiddle()">Riddle</mat-list-item>
-      <mat-divider class="nav-item"></mat-divider>
-      <mat-list-item class="nav-item" (click)="navigateToProfil()">Profil</mat-list-item>
-      <mat-divider class="nav-item"></mat-divider>
-    </mat-list>
-
-  </mat-drawer>
-  <mat-drawer-content class = "main-content">
-    <div class = "layout-header">
-      <h2 class = "title"> 49. Minden Szipi Szuper Schönherz Qpa</h2>
-    </div>
-    <div class="feature-content">
-      <router-outlet></router-outlet>
-
-    </div>
-  </mat-drawer-content>
-</mat-drawer-container>
+<div class="navbar">
+  <mat-list>
+    <div class="nav-header"><h2>Qpa Web Jee</h2></div>
+    <mat-divider></mat-divider>
+    <mat-divider></mat-divider>
+    <mat-list-item class="nav-item" (click)="navigateToNews()">Hírek</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item class="nav-item" (click)="navigateToTeams()">Csapatok</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item class="nav-item" (click)="navigateToSormeres()">Sormeres</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item class="nav-item" (click)="navigateToRiddle()">Riddle</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item class="nav-item" (click)="navigateToProfil()">Profil</mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
+<div class="main-content">
+  <div class="layout-header">
+    <h2 class="title">49. Minden Szipi Szuper Schönherz Qpa</h2>
+  </div>
+  <div class="feature-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
